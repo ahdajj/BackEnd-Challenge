@@ -1,0 +1,36 @@
+<html lang="en">
+<%- include("./partials/head.ejs") %>
+
+<body>
+  <%- include("./partials/nav.ejs") %>
+    
+   <a href="/">Back</a>
+  <div class="content">
+  <div>
+    <h3><%= feeds.Name %></h3>
+      <p><%= feeds.Message %></p>
+     <h5><%= feeds.Create_at%></h5>
+  </div>
+  </div>
+    <a class="delete" data-doc="<%= feeds._id %>">delete article</a>
+ 
+    <a class="edit" href="/feed/edit/<%= feeds._id %>">Edit article</a>
+  
+    
+  <script>
+    const trashcan = document.querySelector('a.delete');
+
+    trashcan.addEventListener('click', (e) => {
+      const endpoint = `/feed/${trashcan.dataset.doc}`;
+
+      fetch(endpoint, {
+        method: 'DELETE',
+      })
+      .then(response => response.json())
+      .then(data => window.location.href = data.redirect)
+      .catch(err => console.log(err));
+    });
+    
+  </script>
+</body>
+</html>

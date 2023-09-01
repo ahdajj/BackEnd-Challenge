@@ -1,0 +1,18 @@
+<html lang="en">
+<%- include("./partials/head.ejs") %>
+
+<body>
+  <%- include("./partials/nav.ejs") %>
+  
+   <div class="Create-feed">
+      <a href="/feed">Back</a>
+      <form action="/feed/edit/<%= feeds._id %>" method="post">
+      <label for="Name">Name:</label>
+      <textarea name="Name"><%= feeds.Name %></textarea>
+      <label for="Message">Message:</label>
+      <textarea name="Message"> <%= feeds.Message %></textarea>
+      <button>Submit</button>
+      </form>
+    </div>
+</body>
+</html>

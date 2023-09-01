@@ -1,0 +1,100 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&display=swap');
+body{
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 0 20px;
+  font-family: 'Noto Serif', serif;
+}
+p, h5, h3{
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  color: black;
+}
+a {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  color: blue;
+}
+nav{
+  text-align: right;
+  margin-bottom: 60px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ddd;
+  text-transform: uppercase;
+}
+
+h5{
+  margin-top: 10px;
+}
+h3{
+  text-transform: capitalize;
+ 
+}
+.content{
+  display: block;
+  margin-left: 20px;
+  margin: 50px auto;
+  width: 50%;
+}
+
+/* index styles */
+.content a{
+    margin: 40px 0;
+    margin-left: 300px;
+    border-bottom: 3px solid crimson;
+  }
+  .content a:hover h3{
+    color: crimson;
+  }
+  
+.Create-feed form{
+  max-width: 400px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+.Create-feed input,
+.Create-feed textarea{
+  display: block;
+  width: 100%;
+  margin: 5px 0;
+  padding: 4px;
+}
+.Create-feed label{
+  display: block;
+  margin-top: 12px;
+}
+textarea{
+  height: 80px;
+}
+.Create-feed button{
+  margin-top: 20px;
+  background: blue;
+  color: white;
+  padding: 6px;
+  border: 0;
+  font-size: 1.2em;
+  cursor: pointer;
+}
+/* details styles */
+
+.delete {
+  margin: 100px;
+  border-radius: 50%;
+  padding: 8px;
+  background-color: red;
+  color: white;
+}
+.edit {
+  margin: 100px;
+  border-radius: 50%;
+  padding: 8px;
+  background-color: blue;
+  color: white;
+}
+.delete:hover , .edit:hover{
+  cursor: pointer;
+  box-shadow: 1px 2px 3px rgba(0,0,0,0.2);
+}
